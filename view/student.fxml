@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.Line?>
+
+<VBox fx:controller="controller.StudentController" styleClass="background" prefHeight="800.0" prefWidth="700.0" spacing="20"
+      xmlns:fx="http://javafx.com/fxml/1">
+
+    <padding>
+        <Insets top="10" bottom="10" left="5" right="5" />
+    </padding>
+
+    <stylesheets>
+         <URL value="@tmsfx.css"/>
+    </stylesheets>
+
+   <GridPane styleClass="header" alignment="center" hgap="47" vgap="10" prefHeight="300" prefWidth="660">
+        <Label styleClass="label-h2" text="Personal Details" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" GridPane.halignment="LEFT"/>
+        <Label styleClass="label-opac" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+        <Label styleClass="label-opac" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+        <Label styleClass="label-opac" text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.halignment="LEFT"/>
+        <Label styleClass="label-opac" text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.halignment="LEFT"/>
+        <TextField fx:id="nameTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+        <TextField fx:id="emailTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+        <TextField fx:id="phoneTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="LEFT"/>
+        <TextField fx:id="addressTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.halignment="LEFT"/>
+   </GridPane>
+
+   <Line startX="20.0" startY="350.0" endX="680.0" endY="350.0" stroke="#ffffff" strokeWidth="2.0" opacity="0.7"/>
+
+   <GridPane styleClass="header" alignment="center" hgap="20" vgap="10" prefHeight="350" prefWidth="660">
+           <Label styleClass="label-h2" text="Tuition Details" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" GridPane.halignment="LEFT"/>
+           <Label styleClass="label-opac" text="Student ID" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+           <Label styleClass="label-opac" text="Type" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+           <Label styleClass="label-opac" text="Credits:" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.halignment="LEFT"/>
+           <Label styleClass="label-opac" text="Scholarship:" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.halignment="LEFT"/>
+           <Label styleClass="label-opac" text="Deduction:" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.halignment="LEFT"/>
+           <TextField fx:id="idTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+           <TextField fx:id="typeTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+           <TextField fx:id="creditsTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="LEFT"/>
+           <TextField fx:id="scholarshipTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.halignment="LEFT"/>
+           <TextField fx:id="deductionTF" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.halignment="LEFT"/>
+   </GridPane>
+
+   <HBox alignment="center" spacing="10">
+           <Button fx:id="addBtn" styleClass="button" text="Add" onAction="#handleAdd"/>
+           <Button fx:id="updateBtn" styleClass="button" text="Update" onAction="#handleUpdate"/>
+           <Button fx:id="closeBtn" styleClass="button" text="Close" onAction="#handleClose"/>
+
+           <padding><Insets top="20" right="0" bottom="0" left="0"/></padding>
+   </HBox>
+
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+
+	
+<GridPane fx:controller="controller.LoginController" xmlns:fx="http://javafx.com/fxml/1"
+          alignment="CENTER" hgap="5" vgap="10" styleClass="background" prefHeight="250.0" prefWidth="420.0">
+
+    <stylesheets>
+               <URL value="@tmsfx.css"/>
+    </stylesheets>
+
+    <Label styleClass="label-h2" text="Login" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="LEFT"/>
+    <Label styleClass="label-opac" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+    <Label styleClass="label-opac" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+
+    <TextField fx:id="emailTF" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT"/>
+
+    <PasswordField fx:id="passTF" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="2" GridPane.halignment="LEFT"/>
+
+    <Label fx:id="errorLbl" styleClass="label-error" text="" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="3" GridPane.halignment="CENTER"/>
+    <Button fx:id="OKBtn" styleClass="button" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.halignment="RIGHT" onAction="#handleOK">
+        <GridPane.margin>
+              <Insets left="10" bottom="20"/>
+        </GridPane.margin>
+    </Button>
+    <Button fx:id="CancelBtn" styleClass="button" text="Cancel" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.halignment="LEFT" onAction="#handleCancel">
+         <GridPane.margin>
+             <Insets right="10" bottom="20"/>
+         </GridPane.margin>
+    </Button>
+
+</GridPane>

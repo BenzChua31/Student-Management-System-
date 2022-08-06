@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.shape.Line?>
+
+
+<VBox fx:controller="controller.TMSController" alignment="center" prefHeight="760.0" prefWidth="600.0" styleClass="background" spacing="10"
+      xmlns:fx="http://javafx.com/fxml/1" >
+
+        <stylesheets>
+             <URL value="@tmsfx.css"/>
+        </stylesheets>
+
+      <TableView styleClass="table-row-cell table-cell" fx:id="reportsTV" prefHeight="500">
+              <placeholder>
+                     <Text styleClass="feedbackTxt" text="Student report list not loaded"/>
+              </placeholder>
+              <columns>
+                    <TableColumn text="Name" prefWidth="115">
+                         <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Tuition" prefWidth="117">
+                         <cellValueFactory><PropertyValueFactory property="totalFee"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Scholarship" prefWidth="116">
+                         <cellValueFactory><PropertyValueFactory property="scholarship"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Deduction" prefWidth="115">
+                         <cellValueFactory><PropertyValueFactory property="deduction"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="NetFee" prefWidth="117">
+                         <cellValueFactory><PropertyValueFactory property="netFee"/></cellValueFactory>
+                    </TableColumn>
+              </columns>
+      </TableView>
+
+      <Line startX="10.0" startY="500.0" endX="590.0" endY="500.0" stroke="#ffffff" strokeWidth="2.0" opacity="0.7"/>
+
+      <GridPane prefWidth="580" prefHeight="110" vgap="5" hgap="20" styleClass="header" alignment="CENTER">
+            <Text id="feedbackTxt" text="Total Tuition:" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+            <Text id="feedbackTxt" text="Total NetFee:" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+            <Text id="feedbackTxt" text="Total BAS:" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.halignment="LEFT"/>
+            <Text fx:id="totalTuitionTxT" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+            <Text fx:id="totalNetFeeTxT" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+            <Text fx:id="totalBASTxT" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="LEFT"/>
+            <Text id="feedbackTxt" text="Total Scholarship:" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+            <Text id="feedbackTxt" text="Total Deduction:" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+            <Text fx:id="totalScholarshipTxT" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+            <Text fx:id="totalDeductionTxT" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.halignment="LEFT"/>
+      </GridPane>
+
+      <Line startX="10.0" startY="600.0" endX="590.0" endY="600.0" stroke="#ffffff" strokeWidth="2.0" opacity="0.7"/>
+
+      <HBox alignment="CENTER">
+            <Button fx:id="closeBtn" styleClass="button" text="Close" onAction="#handleClose"/>
+            <padding>
+                 <Insets top="10"/>
+            </padding>
+      </HBox>
+
+    
+</VBox>

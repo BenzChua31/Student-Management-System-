@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:controller="controller.FacultyController" xmlns:fx="http://javafx.com/fxml/1" alignment="center"
+      spacing="10" styleClass="background" prefHeight="450.0" prefWidth="600.0">
+
+      <stylesheets>
+             <URL value="@tmsfx.css"/>
+      </stylesheets>
+
+      <HBox alignment="CENTER_LEFT">
+            <Label styleClass="label-h2" text="Filters"/>
+      </HBox>
+
+      <HBox alignment="center" spacing="15">
+            <Label styleClass="label-opac" text="Name:"/>
+            <TextField fx:id="nameTF" prefWidth="160" promptText="Filter by name"/>
+            <Label styleClass="label-opac" text="Email:"/>
+            <TextField fx:id="emailTF" prefWidth="160" promptText="Filter by email"/>
+      </HBox>
+
+      <Line startX="10.0" startY="150.0" endX="590.0" endY="150.0" stroke="#ffffff" strokeWidth="2.0" opacity="0.7" />
+
+      <TableView styleClass="table-row-cell table-cell" fx:id="studentsTV" items="${controller.faculty.students}" prefHeight="250">
+            <placeholder>
+                   <Text id="feedbackTxt" text="Student list not loaded"/>
+            </placeholder>
+            <columns>
+                  <TableColumn text="Name" prefWidth="192">
+                       <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Email" prefWidth="195">
+                       <cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="Phone" prefWidth="193">
+                       <cellValueFactory><PropertyValueFactory property="phone"/></cellValueFactory>
+                  </TableColumn>
+            </columns>
+      </TableView>
+
+      <Line startX="10.0" startY="400.0" endX="590.0" endY="400.0" stroke="#ffffff" strokeWidth="2.0" opacity="0.7"/>
+
+      <HBox alignment="center" spacing="10">
+            <Button fx:id="addBtn" styleClass="button" text="Add" onAction="#handleAdd"/>
+            <Button fx:id="deleteBtn" styleClass="button" text="Delete" onAction="#handleDelete"/>
+            <Button fx:id="selectBtn" styleClass="button" text="Select" onAction="#handleSelect"/>
+            <Button fx:id="slipBtn" styleClass="button" text="SLIP" onAction="#handleSlip"/>
+            <Button fx:id="reportBtn" styleClass="button" text="Report" onAction="#handleReport"/>
+            <Button fx:id="closeBtn" styleClass="button" text="Close" onAction="#handleClose"/>
+
+            <padding><Insets top="5" right="0" bottom="10" left="0"/></padding>
+      </HBox>
+
+
+</VBox>
