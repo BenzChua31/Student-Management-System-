@@ -1,4 +1,4 @@
-# Student-Management-System-
+# Tuition-Management-System-
 Application Programming Assignment (UTS)
 
 - Implemented OOP Concepts
